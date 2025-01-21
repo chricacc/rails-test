@@ -1,12 +1,7 @@
 # This is a test app on Ruby on Rails
 
-I developed this really quickly to test the basics of Rails.
+I developed this in a few hours to test the basics of Rails.
 I followed the course from "freeCodeCamp.com" on YouTube, and tried to push it a bit further.
-
-//TODO : explore REST implementations
-//TODO : apply TDD
-//TODO : deploy this using Docker on my own server
-//TODO : discover Rail's tooling regarding monitoring/tracing/alerting
 
 ## Installation
 
@@ -31,3 +26,8 @@ As this project is not intended to be ran live :
 - No real database is configured
 - No real SMTP server is configured
 
+## TODO
+- [ ] explore REST implementations
+- [ ] apply TDD
+- [ ] deploy this using Docker on my own server
+- [ ] discover Rail's tooling regarding monitoring/tracing/alerting
