@@ -1,0 +1,25 @@
+<% content_for :title, "Friends" %>
+
+<h1>Friends</h1>
+
+<table class="table table-striped mt-3" id="friends">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First name</th>
+      <th scope="col">Last name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Twitter</th>
+      <th scope="col">User ID</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @friends.each do |friend| %>
+    <%= render friend %>
+  <% end %>
+  <tbody>
+</table>
+
+<%= link_to "New friend", new_friend_path, class:"btn btn-dark" %>

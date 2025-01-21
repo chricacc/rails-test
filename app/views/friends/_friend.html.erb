@@ -1,0 +1,39 @@
+<tr id="<%= dom_id friend %>">
+  <td>
+    <%= link_to friend.id, friend_path(friend.id) %>
+  </td>
+  <td>
+    <%= friend.first_name %>
+  </td>
+
+  <td>
+    <%= friend.last_name %>
+  </td>
+
+  <td>
+    <%= friend.email %>
+  </td>
+
+  <td>
+    <%= friend.phone %>
+  </td>
+
+  <td>
+    <%= friend.twitter %>
+  </td>
+
+  <td>
+    <%= friend.user_id %>
+  </td>
+
+  <%if friend.user == current_user%>
+  <td>
+    <%= link_to "Edit", edit_friend_path(friend.id), class:"btn btn-dark"  %>
+  </td>
+  <td>
+    <%= button_to "Delete", friend, method: :delete, class:"btn btn-outline-danger" %>
+  </td>
+  <%else %>
+    <td/> <td/>
+  <%end %>
+</tr>

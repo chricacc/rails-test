@@ -1,0 +1,15 @@
+<% content_for :title, "Editing friend" %>
+
+<div class="card mt-4">
+  <div class="card-header">
+    <h2>Editing friend</h2>
+  </div>
+
+  <div class="container py-3">
+    <%= render "form", friend: @friend %>
+  </div>
+</div>
+<div>
+  <%= link_to "Show", @friend %> |
+  <%= link_to "Back", friends_path %>
+</div>
