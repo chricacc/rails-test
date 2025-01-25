@@ -2,24 +2,31 @@
 
 <h1>Friends</h1>
 
-<table class="table table-striped mt-3" id="friends">
-  <thead class="table-dark">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First name</th>
-      <th scope="col">Last name</th>
-      <th scope="col">Email</th>
-      <th scope="col">Phone</th>
-      <th scope="col">Twitter</th>
-      <th scope="col">User ID</th>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
-  <tbody>
-  <% @friends.each do |friend| %>
-    <%= render friend %>
-  <% end %>
-  <tbody>
-</table>
+<%= form_with(url: friends_path, method: "GET") do |form| %>
+  <%= form.text_field :query, value:@query, class:"form-control mb-2", placeholder:"Search here" %>
+  <%= form.submit 'Search', name: nil, class:"btn btn-dark" %>
+<% end %>
+
+<div id="search-results">
+  <table class="table table-striped mt-3" id="friends">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First name</th>
+        <th scope="col">Last name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Twitter</th>
+        <th scope="col">User ID</th>
+        <th colspan="2"></th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @friends.each do |friend| %>
+      <%= render friend %>
+    <% end %>
+    <tbody>
+  </table>
+</div>
 
 <%= link_to "New friend", new_friend_path, class:"btn btn-dark" %>
